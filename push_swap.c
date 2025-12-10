@@ -85,6 +85,8 @@ int	main(int argc, char **argv)
 	//swap(a);
 //	rrr(a,b);
 
+	//three_elems(a);
+	//ft_printf("%d\n",is_sorted(a));
 	sort(a,b);
 	t_node *temp = a->head;
      	while (temp)

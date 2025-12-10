@@ -29,12 +29,12 @@ int	is_sorted(t_stack *a)
 	if (!a || a->size <=1)
 		return (1);
 	temp1 = a->head;
-	temp2 = temp1->next;
+	temp2 = a->head->next;
 	while (temp2 != NULL)
 	{
 		if (temp1->value > temp2->value)
 			return (0);
-		temp1 = temp2;
+		temp1 = temp1->next;
 		temp2 = temp2->next;
 	}
 	return (1);
@@ -100,7 +100,7 @@ void	make_operas(t_stack *a, t_stack *b, int x, int y)
 	if (x == 0 && y == 0)
 	{
 		pp(a, b);
-		if (a->head->value < a->head->next->value)
+		if (a->head->value > a->head->next->value)
 			swap(a);
 		return ;
 	}
@@ -137,17 +137,17 @@ void	sort(t_stack *a, t_stack *b)
 	while (a->size > 3)
 		pp(b, a);
 	three_elems(a);
-
-	while (b->size != 0 || !is_sorted(a))
+	ft_printf("%d\n",is_sorted(a));	
+	while (b->size != 0)
 	{
-		ft_printf("%d\n",b->size);		
+		//ft_printf("%d\n",b->size);		
 		
 		index_b = find_min_b(b, &num_b);
-		ft_printf("hi1%d %d\n",index_b,num_b);
+		//ft_printf("hi1%d %d\n",index_b,num_b);
 		index_a = search_closer(a, num_b);
-		ft_printf("hi2%d\n",index_a);
+		//ft_printf("hi2%d\n",index_a);
 		make_operas(a, b, index_a, index_b);
-		ft_printf("hi3\n");
+		ft_printf("is %d  size%d\n",b->size, is_sorted(a));
 	}
 	while (a->head->value > a->head->next->value)
 		rotate(a);

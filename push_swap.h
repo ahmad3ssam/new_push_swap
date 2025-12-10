@@ -31,4 +31,5 @@ void	rrr(t_stack *a, t_stack *b);
 void	three_elems(t_stack *a);
 int		undup(t_stack *stack, int num);
 void	sort(t_stack *a, t_stack *b);
+int	is_sorted(t_stack *a);
 #endif
