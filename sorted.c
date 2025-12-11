@@ -104,6 +104,15 @@ void	make_operas(t_stack *a, t_stack *b, int x, int y)
 			swap(a);
 		return ;
 	}
+ if (x == 0 && y == 1)
+ {
+    if (a->head->value > b->head->next->value)
+        swap(b);
+    else
+       rrotate(a,b);
+     pp(a,b);
+ }
+
 	if ((x > a->size / 2) && (y > b->size / 2))
 		while(a->size >= x++ && b->size >= y++)
 			rrr(a,b);
