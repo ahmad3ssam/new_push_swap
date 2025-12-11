@@ -7,14 +7,14 @@ void	three_elems(t_stack *a)
 	while (1)
 	{
 		if (a->head->value > a->tail->value)
-			rotate(a);
+			rotate(a, 1);
 		else if (a->head->value > a->head->next->value)
 			swap(a);
 		else if (a->head->next->value > a->tail->value)
 		{
-			rotate(a);
+			rotate(a, 1);
 			swap(a);
-			rrotate(a);
+			rrotate(a, 1);
 		}
 		else
 			break;
@@ -104,14 +104,14 @@ void	make_operas(t_stack *a, t_stack *b, int x, int y)
 			swap(a);
 		return ;
 	}
- if (x == 0 && y == 1)
- {
-    if (a->head->value > b->head->next->value)
-        swap(b);
-    else
-       rrotate(a,b);
-     pp(a,b);
- }
+	if (x == 0 && y == 1)
+	{
+		if (a->head->value > b->head->next->value)
+			swap(b);
+		else
+			rrotate(a,b);
+		pp(a,b);
+	}
 
 	if ((x > a->size / 2) && (y > b->size / 2))
 		while(a->size >= x++ && b->size >= y++)
@@ -119,14 +119,14 @@ void	make_operas(t_stack *a, t_stack *b, int x, int y)
 	else if ((x > a->size / 2) && (y <= b->size / 2))
 		while (a->size >= x++ && 0 > y--)
 		{
-			rrotate(a);
-			rotate(b);
+			rrotate(a, 1);
+			rotate(b, 1);
 		}
 	else if ((x <= a->size / 2) && (y > b->size / 2))
 		while (0 > x-- && b->size >= y++)
 		{
-			rotate(a);
-			rrotate(b);
+			rotate(a, 1);
+			rrotate(b, 1);
 		}
 	else
 		while (0 > x-- && 0 > y--)
@@ -159,5 +159,5 @@ void	sort(t_stack *a, t_stack *b)
 		ft_printf("is %d  size%d\n",b->size, is_sorted(a));
 	}
 	while (a->head->value > a->head->next->value)
-		rotate(a);
+		rotate(a, 1);
 }

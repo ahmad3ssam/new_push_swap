@@ -24,9 +24,9 @@ typedef struct s_stack
 void	pp(t_stack *dest, t_stack *src);
 void	ss(t_stack *a, t_stack *b);
 void	swap(t_stack *stack);
-void	rotate(t_stack *stack);
+void	rotate(t_stack *stack, int print);
 void	rr(t_stack *a, t_stack *b);
-void	rrotate(t_stack *stack);
+void	rrotate(t_stack *stack, int print);
 void	rrr(t_stack *a, t_stack *b);
 void	three_elems(t_stack *a);
 int		undup(t_stack *stack, int num);
