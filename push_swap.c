@@ -88,18 +88,18 @@ int	main(int argc, char **argv)
 	//three_elems(a);
 	//ft_printf("%d\n",is_sorted(a));
 	sort(a,b);
-	t_node *temp = a->head;
-     	while (temp)
-     	{
-        	 ft_printf("stack a values: %d\n",temp->value);
-        	 temp = temp->next;
-	}
-	temp = b->head;
-     	while (temp)
-     	{
-        	 //ft_printf("stack b values: %d\n",temp->value);
-        	 temp = temp->next;
-	}
+	// t_node *temp = a->head;
+    //  	while (temp)
+    //  	{
+    //     	 ft_printf("stack a values: %d\n",temp->value);
+    //     	 temp = temp->next;
+	// }
+	// temp = b->head;
+    //  	while (temp)
+    //  	{
+    //     	 //ft_printf("stack b values: %d\n",temp->value);
+    //     	 temp = temp->next;
+	// }
 
 	//ss(a,b);
 
