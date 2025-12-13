@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahhammad <ahhammad@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/13 22:10:11 by ahhammad          #+#    #+#             */
+/*   Updated: 2025/12/13 22:49:37 by ahhammad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include "libft/libft.h"
@@ -29,7 +41,6 @@ void	rr(t_stack *a, t_stack *b);
 void	rrotate(t_stack *stack, int print);
 void	rrr(t_stack *a, t_stack *b);
 void	three_elems(t_stack *a);
-int		undup(t_stack *stack, int num);
 void	sort(t_stack *a, t_stack *b);
 int	is_sorted(t_stack *a);
 #endif

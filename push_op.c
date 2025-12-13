@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_op.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahhammad <ahhammad@student.42amman.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/13 22:09:59 by ahhammad          #+#    #+#             */
+/*   Updated: 2025/12/13 22:10:00 by ahhammad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	pp(t_stack *dest, t_stack *src)
@@ -16,5 +28,5 @@ void	pp(t_stack *dest, t_stack *src)
 		dest->tail = temp;
 	dest->size++;
 	src->size--;
-	ft_printf("p%c\n",dest->name);
+	ft_printf("p%c\n", dest->name);
 }
